@@ -3,21 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feelify Mood Music Recommender</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Feelify - Mood Music Recommender</title>
 </head>
 <body>
     <div class="splash-screen">
-        <h1>Welcome to Feelify!</h1>
+        <h1>Welcome to Feelify</h1>
+        <p>Your mood music recommendation awaits!</p>
     </div>
-    <div class="content">
-        <h2>Music for Different Moods</h2>
-        <h3>Happy</h3>
-        <iframe src="https://open.spotify.com/embed/playlist/happy_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <h3>Sad</h3>
-        <iframe src="https://open.spotify.com/embed/playlist/sad_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        <h3>Chill</h3>
-        <iframe src="https://open.spotify.com/embed/playlist/chill_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <div class="emotion-form">
+        <h2>Detect Your Emotion</h2>
+        <form id="emotion-form">
+            <label for="emotion">How are you feeling today?</label>
+            <select id="emotion" name="emotion">
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="angry">Angry</option>
+                <option value="excited">Excited</option>
+                <option value="romantic">Romantic</option>
+                <option value="motivated">Motivated</option>
+            </select>
+            <button type="submit">Get Recommendations</button>
+        </form>
+    </div>
+
+    <div class="recommendations">
+        <h2>Music Recommendations</h2>
+        <div id="happy" class="mood-player">
+            <h3>Happy</h3>
+            <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:happy_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div id="sad" class="mood-player">
+            <h3>Sad</h3>
+            <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:sad_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div id="angry" class="mood-player">
+            <h3>Angry</h3>
+            <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:angry_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div id="excited" class="mood-player">
+            <h3>Excited</h3>
+            <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:excited_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div id="romantic" class="mood-player">
+            <h3>Romantic</h3>
+            <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:romantic_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div id="motivated" class="mood-player">
+            <h3>Motivated</h3>
+            <iframe src="https://open.spotify.com/embed?uri=spotify:playlist:motivated_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
     </div>
 </body>
 </html>
